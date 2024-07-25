@@ -13,6 +13,7 @@ Il secondo lato è quello un po' più interessante da analizzare, perchè nel di
 ![golden record](resources/goldenrecord.jpeg)
 
 E il suo audio è ancora più particolare, perché non vi è codificata della musica ma delle immagini
+
 https://github.com/user-attachments/assets/b6a46836-d71d-4d14-8dbe-f68c42566087
 
 Come trasformare quella particolare forma d'onda nelle immagini non è esattamente immediato, soprattutto per l'interpretazione di alcuni simboli che sono necessari, la spiegazione del metodo è in questo [Notebook Python](decoder.ipynb), mentre il codice pulito è in questo [script](decoder.py)
@@ -39,6 +40,7 @@ The second side is a bit more interesting to analyse because the accompanying re
 ![golden record](resources/goldenrecord.jpeg)
 
 And its audio is even more peculiar because it does not encode music but images.
+
 https://github.com/user-attachments/assets/b6a46836-d71d-4d14-8dbe-f68c42566087
 
 
