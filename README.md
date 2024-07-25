@@ -1,6 +1,6 @@
 # Voyager Images - a simocorbo's side project
 ## Italian
-(English Below)
+(English Below) - [Le immagini](#Images)
 
 Tutti sanno che nello spazio i suoni non si propagano, allora perché qualcuno nel 1977 ha sentito il bisogno di lanciarne non uno ma ben due, identici, attaccati alle sonde Voyager 1 e 2?
 
