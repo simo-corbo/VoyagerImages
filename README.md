@@ -24,7 +24,7 @@ In totale sono 116 immagini a risoluzione 512x386, alcune a colori e alcune in b
 
 Il file utilizzato è stato registrato da una copia e reso disponibile a questo [link](https://soundcloud.com/user-482195982/voyager-golden-record-encoded-images) (NOTA: il file è stato registrato a velocità dimezzata rispetto a quella effettiva, quindi è stato modificato velocizzandolo a 2x per rispettare i tempi scritti sul Golden Record).
 
-Alcune delle immagini originali possono essere viste [qui](https://voyager.jpl.nasa.gov/galleries/images-on-the-golden-record/#missing_images), altre invece sono elencate nel sito ma non sono visualizzabili per qualche motivo a me sconosciuto, quindi ci si dovrà accontentare di quelle decodificate, che si possono vedere più sotto
+Alcune delle immagini originali possono essere viste [qui](https://voyager.jpl.nasa.gov/galleries/images-on-the-golden-record/#missing_images), altre invece sono elencate nel sito ma non sono visualizzabili per qualche motivo a me sconosciuto, quindi ci si dovrà accontentare di quelle decodificate, che si possono vedere più sotto [[Images]]
 
 >"To the makers of music – all worlds, all times"
 
