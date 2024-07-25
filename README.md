@@ -11,8 +11,9 @@ Come è noto un vinile ha due lati, sul primo ci sono una serie di suoni, saluti
 
 Il secondo lato è quello un po' più interessante da analizzare, perchè nel disco di accompagnamento si presenta così:
 ![golden record](resources/goldenrecord.jpeg)
+
 E il suo audio è ancora più particolare, perché non vi è codificata della musica ma delle immagini
-<audio controls src="resources/voyager_images_double.wav" title="Dati"></audio>
+
 
 Come trasformare quella particolare forma d'onda nelle immagini non è esattamente immediato, soprattutto per l'interpretazione di alcuni simboli che sono necessari, la spiegazione del metodo è in questo [Notebook Python](decoder.ipynb), mentre il codice pulito è in questo [script](decoder.py)
 
@@ -37,7 +38,11 @@ As is well known, a vinyl record has two sides. On the first side, there are a s
 The second side is a bit more interesting to analyse because the accompanying record presents it like this:
 ![golden record](resources/goldenrecord.jpeg)
 And its audio is even more peculiar because it does not encode music but images.
-<audio controls src="resources/voyager_images_double.wav" title="Data"></audio>
+
+
+https://github.com/user-attachments/assets/b6a46836-d71d-4d14-8dbe-f68c42566087
+
+
 
 Transforming that particular waveform into images is not exactly straightforward, especially due to the interpretation of some symbols that are necessary. The explanation of the method is in this [Python Notebook](decoder.ipynb), while the clean code is in this [script](decoder.py).
 
