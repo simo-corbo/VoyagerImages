@@ -1,5 +1,7 @@
 # Voyager Images - a simocorbo's side project
 ## Italian
+(English Below)
+
 Tutti sanno che nello spazio i suoni non si propagano, allora perché qualcuno nel 1977 ha sentito il bisogno di lanciarne non uno ma ben due, identici, attaccati alle sonde Voyager 1 e 2?
 
 Queste due sonde sono state lanciate con l'obiettivo di esplorare i pianeti esterni del Sistema Solare, per poi uscire completamente dalla sfera di influenza del Sole, con direzione lo spazio profondo.
