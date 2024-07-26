@@ -4,7 +4,7 @@ import scipy
 
 def load_data():
     # load the audio file
-    sample_rate, audio_data = scipy.io.wavfile.read('resources/voyager_images_double.wav')
+    sample_rate, audio_data = scipy.io.wavfile.read('resources/voyager_images_384khz.wav')
     print(f"Sample rate: {sample_rate}")
     return audio_data[:, 0], audio_data[:, 1], sample_rate
 
@@ -60,14 +60,11 @@ def offsetDirection(peaks, width, height, img):
             col = scipy.signal.resample(col, width)
             cols.append(col)
     
-    
-
-
     diffs = []
     #for i in range(0, width-1, 2):
     for i in range(0, len(cols)-1, 2):
-        dip_i = scipy.signal.find_peaks(-cols[i], prominence=0.15, threshold=-1)
-        dip_i1 = scipy.signal.find_peaks(-cols[i+1], prominence=0.15, threshold=-1)
+        dip_i = scipy.signal.find_peaks(-cols[i], prominence=0.1, threshold=-1)
+        dip_i1 = scipy.signal.find_peaks(-cols[i+1], prominence=0.1, threshold=-1)
         try:
             if len(dip_i[0]) > 0 and len(dip_i1[0]) > 0:
                 diffs.append(dip_i[0][0]-dip_i1[0][0])
@@ -105,7 +102,7 @@ def developImage(img, sample_rate, offset):
     height=round(width*3/4)
 
 
-    onEven = offsetDirection(peaks, width, height, img)
+    onEven= offsetDirection(peaks, width, height, img)
     # extract the columns
     #for i in range(width-1):
     for i in range(len(peaks)-1):
@@ -141,6 +138,29 @@ def developImage(img, sample_rate, offset):
 
     return img_data
 
+def computeOffset(img, height, sample_rate):
+    colPeaks, _ = scipy.signal.find_peaks(img, distance=sample_rate/200, height=np.max(img)*0.3)
+    cols=[]
+    for i in range(len(colPeaks)-1):
+        # extract the column
+        col = img[colPeaks[i]:colPeaks[i+1]]
+        # an higher value of the column corresponds to a black pixel, so we need to invert the column
+        col = 1-col
+
+        # the column is resized to the height of the image*10
+        col = scipy.signal.resample(col, height*10)
+        # append the column to the rows
+        cols.append(col)
+    diffs = []
+    for i in range(0, len(cols)-1, 2):
+        dip_i, _ = scipy.signal.find_peaks(cols[i], prominence=0.30, threshold=-1)
+        dip_i1, _ = scipy.signal.find_peaks(cols[i+1], prominence=0.30, threshold=-1)
+        if len(dip_i) > 0 and len(dip_i1) > 0:
+            # append the difference in samples between the dips
+            diffs.append(dip_i1[0]-dip_i[0])
+    # average
+    print(f"Average: {round(np.mean(diffs))}")
+    return abs(round(np.mean(diffs)))
 
 def main():
     # load the audio data
@@ -157,6 +177,9 @@ def main():
     height=round(width*3/4)
     imageCounter=0
 
+    # computed with the first image
+    offsetAmount=0
+
     for channel, color_index in channels:
         # remove the beginning of the audio data
         channel = removeBeginning(channel, sample_rate, 15.45)
@@ -167,8 +190,12 @@ def main():
         decoded_imgs = []
 
         for i in range(0, len(imgs)-1):
-            img = fineTrim(channel, imgs[i], imgs[i+1], 8, 8, 0.2, 0.1, 0.75)
-            img= developImage(img, sample_rate, 12)
+            # empirical values for the trimming of the image
+            img = fineTrim(channel, imgs[i], imgs[i+1],  20, 20, 0, 0, 0.7)
+            # 100 is the offset, got empirically
+            if i == 0:
+                offsetAmount = computeOffset(img, height, sample_rate)
+            img= developImage(img, sample_rate, offsetAmount)
             decoded_imgs.append(img)
         
         black_white_imgs = [i for i in range(0, len(decoded_imgs))]
