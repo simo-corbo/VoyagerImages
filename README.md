@@ -18,13 +18,15 @@ E il suo audio è ancora più particolare, perché non vi è codificata della mu
 
 https://github.com/user-attachments/assets/b6a46836-d71d-4d14-8dbe-f68c42566087
 
-Come trasformare quella particolare forma d'onda nelle immagini non è esattamente immediato, soprattutto per l'interpretazione di alcuni simboli che sono necessari, la spiegazione del metodo è in questo [Notebook Python](decoder.ipynb), mentre il codice pulito è in questo [script](decoder.py)
+Come trasformare quella particolare forma d'onda nelle immagini non è esattamente immediato, soprattutto per l'interpretazione di alcuni simboli che sono necessari, la spiegazione del metodo è in questo [Notebook Python](decoder.ipynb), mentre il codice pulito è in questo [script - bassa definizione](decoder.py)
 
 In totale sono 116 immagini a risoluzione 512x386, alcune a colori e alcune in bianco e nero.
 
-Il file utilizzato è stato registrato da una copia e reso disponibile a questo [link](https://soundcloud.com/user-482195982/voyager-golden-record-encoded-images) (NOTA: il file è stato registrato a velocità dimezzata rispetto a quella effettiva, quindi è stato modificato velocizzandolo a 2x per rispettare i tempi scritti sul Golden Record).
+Il file utilizzato è stato registrato da una copia e reso disponibile a questo [link](https://soundcloud.com/user-482195982/voyager-golden-record-encoded-images) (NOTA: il file è stato registrato a velocità dimezzata rispetto a quella effettiva, quindi è stato modificato velocizzandolo a 2x per rispettare i tempi scritti sul Golden Record) mentre un file ad una definizione molto più alta è disponibile [qui](https://archive.org/details/voyager_images_384khz)
 
-Alcune delle immagini originali possono essere viste [qui](https://voyager.jpl.nasa.gov/galleries/images-on-the-golden-record/#missing_images), altre invece sono elencate nel sito ma non sono visualizzabili per qualche motivo a me sconosciuto, quindi ci si dovrà accontentare di quelle decodificate, che si possono vedere [più sotto](#Images)
+Per generare le immagini ho usato il secondo file, con le impostazioni di [decoder_highquality.py](decoder_highquality.py)
+
+Alcune delle immagini originali possono essere viste [qui](https://voyager.jpl.nasa.gov/galleries/images-on-the-golden-record/#missing_images), altre invece sono elencate nel sito ma non sono visualizzabili per motivi di copyright, quindi ci si dovrà accontentare di quelle decodificate, che si possono vedere [più sotto](#Images)
 
 >"To the makers of music – all worlds, all times"
 
